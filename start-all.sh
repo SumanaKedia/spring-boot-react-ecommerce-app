@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Stop and delete the containers
-#docker-compose down
+#docker compose down
 
 # Stop and delete the containers
-docker-compose stop 
+docker compose stop 
 
 # Deleting network if available
 docker network rm spring-cloud-microservices
@@ -16,4 +16,4 @@ docker network create spring-cloud-microservices
 export COMPOSE_HTTP_TIMEOUT=300
 
 # Start all services in background with -d flag
-docker-compose up --build
+docker compose up --build
