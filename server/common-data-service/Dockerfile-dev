@@ -11,7 +11,7 @@ WORKDIR /common_data_service_staging
 RUN ls -l
 
 # Run Maven build
-RUN mvn clean install -DskipTests
+RUN mvn clean install -DskipTests -X
 
 # 2. Just using the build artifact and then removing the build-container
 FROM openjdk:11-jdk

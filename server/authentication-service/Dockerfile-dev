@@ -3,6 +3,10 @@
 # 1. Building the App with Maven
 FROM maven:3-jdk-11
 
+
+# # Add a settings.xml file with custom configuration
+# COPY settings.xml /root/.m2/settings.xml
+
 ADD ./server/authentication-service /authentication_service_staging
 
 WORKDIR /authentication_service_staging
@@ -10,8 +14,8 @@ WORKDIR /authentication_service_staging
 # Just echo so we can see, if everything is there
 RUN ls -l
 
-# Run Maven build
-RUN mvn clean install -DskipTests
+# Run Maven build with verbose output
+RUN mvn clean install -DskipTests -X
 
 # 2. Just using the build artifact and then removing the build-container
 FROM openjdk:11-jdk
