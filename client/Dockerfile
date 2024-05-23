@@ -1,5 +1,5 @@
 # Base Package
-FROM node:18
+FROM node:16
 
 MAINTAINER Sumana Kedia
 
@@ -15,9 +15,7 @@ COPY ./client/package*.json ./
 # RUN npm install -g npm-check-updates
 # RUN ncu
 # RUN ncu -u
-RUN npm install npm@latest -g && \
-    npm install n -g && \
-    n latest
+RUN npm install
 
 # -g npm
 
