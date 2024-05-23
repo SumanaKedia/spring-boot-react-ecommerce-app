@@ -1,5 +1,5 @@
 # Base Package
-FROM node:16
+FROM node: '^18.17.0'
 
 MAINTAINER Sumana Kedia
 
@@ -12,10 +12,8 @@ WORKDIR /usr/src/app
 COPY ./client/package*.json ./
 
 
-RUN npm install -g npm-check-updates
-RUN ncu
-RUN ncu -u
-RUN npm install -g npm
+
+RUN npm install -g npm@latest
 
 # Bundle app source
 COPY . .
