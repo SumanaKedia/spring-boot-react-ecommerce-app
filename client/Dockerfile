@@ -1,5 +1,5 @@
 # Base Package
-FROM node:14
+FROM node:19.5.0-alpine
 
 MAINTAINER Sumana Kedia
 
@@ -12,9 +12,9 @@ WORKDIR /usr/src/app
 COPY ./client/package*.json ./
 
 
-RUN npm install -g npm-check-updates
-RUN ncu
-RUN ncu -u
+# RUN npm install -g npm-check-updates
+# RUN ncu
+# RUN ncu -u
 RUN npm install 
 
 # -g npm
