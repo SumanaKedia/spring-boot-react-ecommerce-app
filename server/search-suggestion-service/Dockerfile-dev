@@ -4,7 +4,7 @@
 FROM maven:3-jdk-11
 
 # # Add a settings.xml file with custom configuration
-COPY server/settings.xml /root/.m2/settings.xml  
+# COPY server/settings.xml /root/.m2/settings.xml  
 
 ADD ./server/search-suggestion-service /search_suggestion_service_staging
 
@@ -14,7 +14,8 @@ WORKDIR /search_suggestion_service_staging
 RUN ls -l
 
 # Run Maven build
-RUN mvn clean install -DskipTests --batch-mode --no-transfer-progress
+RUN mvn clean install -DskipTests 
+# --batch-mode --no-transfer-progress
 
 # 2. Just using the build artifact and then removing the build-container
 FROM openjdk:11-jdk
