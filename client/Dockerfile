@@ -11,7 +11,12 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY ./client/package*.json ./
 
+
+RUN npm install -g npm-check-updates
+RUN ncu
+RUN ncu -u
 RUN npm install 
+
 # -g npm
 
 # Bundle app source
