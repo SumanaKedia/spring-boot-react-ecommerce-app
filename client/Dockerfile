@@ -1,7 +1,7 @@
 # Base Package
 FROM node:14
 
-MAINTAINER Ujjaval Desai
+MAINTAINER Sumana Kedia
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -11,7 +11,8 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY ./client/package*.json ./
 
-RUN npm install -g npm
+RUN npm install 
+# -g npm
 
 # Bundle app source
 COPY . .
