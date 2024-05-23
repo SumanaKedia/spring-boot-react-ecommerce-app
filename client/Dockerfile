@@ -12,12 +12,10 @@ WORKDIR /usr/src/app
 COPY ./client/package*.json ./
 
 
-# RUN npm install -g npm-check-updates
-# RUN ncu
-# RUN ncu -u
-RUN npm install 
-
-# -g npm
+RUN npm install -g npm-check-updates
+RUN ncu
+RUN ncu -u
+RUN npm install -g npm
 
 # Bundle app source
 COPY . .
