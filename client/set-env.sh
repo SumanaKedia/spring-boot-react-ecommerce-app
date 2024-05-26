@@ -3,6 +3,7 @@
 # Fetch the dynamic IP address of the instance
 PUBLIC_IP=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)
 
+
 # Check if the IP is fetched successfully
 if [ -z "$PUBLIC_IP" ]; then
   # If not fetched, use localhost
