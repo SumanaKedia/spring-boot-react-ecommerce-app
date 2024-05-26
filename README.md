@@ -24,6 +24,25 @@ eCommerce application based on the microservices architecture built using Spring
 - Payment service using Stripe's API to buy products.
 - Responsiveness support for all devices.
 
+<!-- command to run ubuntu docker
+sudo apt-get remove docker docker-engine docker.io containerd runc 
+Run Locally: (Ubuntu 22.04 or 24.04) 
+
+Install Docker: 
+
+sudo su 
+sudo apt update 
+sudo apt upgrade -y #Optional 
+sudo apt-get remove docker docker-engine docker.io containerd runc 
+sudo apt install curl #Optional 
+curl -fsSL https://get.docker.com -o get-docker.sh 
+sudo sh ./get-docker.sh 
+sudo docker version 
+Install Docker Compose plugin:  
+sudo apt-get install docker-compose-plugin 
+Verify: 
+docker compose version  -->
+
 **TOOLS USED**
 
 - **ReactJS:** Front-end Javascript framework.
