@@ -25,7 +25,7 @@ RUN npm install
 COPY . .
 
 # Add a script to set the environment variable dynamically - Sumana
-COPY client\set-env.sh /usr/local/bin/
+COPY client/set-env.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/set-env.sh
 
 #RUN yarn install
