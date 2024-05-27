@@ -31,4 +31,4 @@ RUN chmod +x /usr/local/bin/set-env.sh
 #RUN yarn install
 
 # Initiate npm start - changed by Sumana
-CMD ["sh", "-c", "set-env.sh && npm", "run-script", "start_docker_dev" ]
+CMD ["npm", "run-script", "start_docker_dev" ]
